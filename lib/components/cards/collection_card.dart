@@ -1,5 +1,7 @@
 import 'package:c001apk_flutter/components/network_image.dart';
 import 'package:flutter/material.dart';
+
+import '../../constants/app_strings.dart';
 import 'package:get/get.dart';
 
 import '../../logic/model/feed/datum.dart';
@@ -50,9 +52,9 @@ class CollectionCard extends StatelessWidget {
                         children: [
                           Text(data.isOpenTitle ?? ''),
                           const SizedBox(width: 10),
-                          Text('${data.followNum}人关注'),
+                          Text(AppStrings.of(context).followedByCount(data.followNum ?? 0)),
                           const SizedBox(width: 10),
-                          Text('${data.itemNum}个内容'),
+                          Text(AppStrings.of(context).contentCount(data.itemNum ?? 0)),
                         ],
                       ),
                     ),

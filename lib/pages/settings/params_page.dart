@@ -32,7 +32,7 @@ class _ParamsPageState extends State<ParamsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Params'),
+        title: const Text('参数'),
         leading: const BackButton(),
       ),
       body: ListView(
@@ -101,20 +101,20 @@ class _ParamsPageState extends State<ParamsPage> {
           ),
           Obx(
             () => ListTile(
-              title: const Text('User Angent'),
+              title: const Text('用户代理'),
               subtitle: Text(_paramsController.userAgent.value),
               onTap: () => Utils.copyText(_paramsController.userAgent.value),
             ),
           ),
           Obx(
             () => ListTile(
-              title: const Text('X-App-Device'),
+              title: const Text('设备标识'),
               subtitle: Text(_paramsController.xAppDevice.value),
               onTap: () => Utils.copyText(_paramsController.xAppDevice.value),
             ),
           ),
           ListTile(
-            title: const Text('Regenerate Params'),
+            title: const Text('重新生成参数'),
             onTap: () async {
               await GStorage.regenerateParams();
               manufacturerKey.currentState?.updateValue();

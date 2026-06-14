@@ -1,5 +1,7 @@
 import 'package:c001apk_flutter/components/network_image.dart';
 import 'package:flutter/material.dart';
+
+import '../../constants/app_strings.dart';
 import 'package:get/get.dart';
 
 import '../../components/cards/icon_mini_scroll_card.dart' show miniCardItem;
@@ -606,13 +608,13 @@ class _MorePanel extends StatelessWidget {
             onTap: () async => await menuActionHandler(PanelAction.copy),
             minLeadingWidth: 0,
             leading: const Icon(Icons.copy_outlined, size: 19),
-            title: Text('Copy', style: Theme.of(context).textTheme.titleSmall),
+            title: Text(AppStrings.of(context).copy, style: Theme.of(context).textTheme.titleSmall),
           ),
           ListTile(
             onTap: () async => await menuActionHandler(PanelAction.block),
             minLeadingWidth: 0,
             leading: const Icon(Icons.block, size: 19),
-            title: Text('Block', style: Theme.of(context).textTheme.titleSmall),
+            title: Text(AppStrings.of(context).block, style: Theme.of(context).textTheme.titleSmall),
           ),
           if (Utils.isSupportWebview())
             ListTile(
@@ -620,7 +622,7 @@ class _MorePanel extends StatelessWidget {
               minLeadingWidth: 0,
               leading: const Icon(Icons.error_outline, size: 19),
               title:
-                  Text('Report', style: Theme.of(context).textTheme.titleSmall),
+                  Text(AppStrings.of(context).report, style: Theme.of(context).textTheme.titleSmall),
             ),
           if (isHistory || uid.toString() == GlobalData().uid)
             ListTile(
@@ -628,7 +630,7 @@ class _MorePanel extends StatelessWidget {
               minLeadingWidth: 0,
               leading: const Icon(Icons.delete_outline, size: 19),
               title:
-                  Text('Delete', style: Theme.of(context).textTheme.titleSmall),
+                  Text(AppStrings.of(context).delete, style: Theme.of(context).textTheme.titleSmall),
             ),
         ],
       ),

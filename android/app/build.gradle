@@ -40,21 +40,17 @@ android {
     }
 
     signingConfigs {
-        if(_storeFile != null) {
-            release {
-                storeFile _storeFile
-                storePassword _storePassword
-                keyAlias _keyAlias
-                keyPassword _keyPassword
-                v1SigningEnabled true
-                v2SigningEnabled true
-            }
-        }
+        // Release signing disabled for development
     }
 
     buildTypes {
-        all {
-            signingConfig _storeFile != null ? signingConfigs.release : signingConfigs.debug
+        release {
+            // No signing config for release builds
+            minifyEnabled false
+            shrinkResources false
+        }
+        debug {
+            // Debug builds use default debug signing
         }
     }
 }

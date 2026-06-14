@@ -12,7 +12,7 @@ class AboutPage extends StatelessWidget {
     final version = Get.parameters['version'] ?? '';
     return Scaffold(
       appBar: AppBar(
-        title: const Text('About'),
+        title: const Text('关于'),
         leading: const BackButton(),
       ),
       body: ListView(
@@ -25,24 +25,24 @@ class AboutPage extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.all_inclusive),
             title: const Text(Constants.APP_NAME),
-            subtitle: const Text('test only'),
+            subtitle: const Text('仅供测试'),
             onTap: () {},
           ),
           ListTile(
             leading: const Icon(Icons.error_outline),
-            title: const Text('Version'),
+            title: const Text('版本'),
             subtitle: Text(version),
             onTap: () {},
           ),
           ListTile(
             leading: const Icon(Icons.code),
-            title: const Text('Source Code'),
+            title: const Text('源代码'),
             subtitle: const Text(Constants.URL_SOURCE_CODE),
             onTap: () => Utils.launchURL(Constants.URL_SOURCE_CODE),
           ),
           ListTile(
             leading: const Icon(Icons.source_outlined),
-            title: const Text('Open Source License'),
+            title: const Text('开源许可证'),
             onTap: () => showLicensePage(
               context: context,
               applicationName: Constants.APP_NAME,

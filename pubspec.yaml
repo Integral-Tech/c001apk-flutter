@@ -68,6 +68,8 @@ dependencies:
   window_manager: ^0.5.0
   gif_view: ^1.0.3
   cupertino_icons: ^1.0.8
+  flutter_localizations:
+    sdk: flutter
 
 dev_dependencies:
   flutter_test:

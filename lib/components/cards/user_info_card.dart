@@ -2,6 +2,8 @@ import 'dart:math';
 
 import 'package:c001apk_flutter/components/network_image.dart';
 import 'package:flutter/material.dart';
+
+import '../../constants/app_strings.dart';
 import 'package:get/get.dart';
 
 import '../../logic/model/feed/datum.dart';
@@ -274,10 +276,10 @@ class UserInfoCard extends StatelessWidget {
                     Icon(data.gender == 1 ? Icons.male : Icons.female,
                         size: 20.0),
                     SizedBox(width: 5),
-                    Text('${DateUtil.fromToday(data.logintime)}活跃'),
+                    Text(AppStrings.of(context).active(DateUtil.fromToday(data.logintime))),
                   ],
                 )
-              : Text('${DateUtil.fromToday(data.logintime)}活跃'),
+              : Text(AppStrings.of(context).active(DateUtil.fromToday(data.logintime))),
         ),
       ],
     );

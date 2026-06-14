@@ -139,7 +139,7 @@ class _AppUpdatePageState extends State<AppUpdatePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Update${_length != null ? ': $_length' : ''}'),
+        title: Text('更新${_length != null ? ': $_length' : ''}'),
         bottom: const PreferredSize(
           preferredSize: Size.zero,
           child: Divider(height: 1),

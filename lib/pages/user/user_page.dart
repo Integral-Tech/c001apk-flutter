@@ -234,7 +234,7 @@ class _UserPageState extends State<UserPage> {
                         'pageParam': _userController.uid,
                       }),
                       icon: const Icon(Icons.search),
-                      tooltip: 'Search',
+                      tooltip: '搜索',
                     ),
                   PopupMenuButton(
                     onSelected: (UserMenuItem item) {

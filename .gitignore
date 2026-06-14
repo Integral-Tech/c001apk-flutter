@@ -41,3 +41,14 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Keystore and signing files (sensitive)
+*.jks
+*.keystore
+!android/debug.keystore
+android/key.properties
+android/c001apk-release.jks
+
+# Build scripts output
+*.apk
+*.aab

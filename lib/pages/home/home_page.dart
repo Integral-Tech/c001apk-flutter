@@ -26,7 +26,13 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   // late final _config = Provider.of<AppConfigProvider>(context, listen: false);
   // late bool _showFab = true; //_config.isLogin;
 
-  final _tabList = TabType.values.map((type) => Tab(text: type.name)).toList();
+  final _tabList = TabType.values.map((type) => Tab(text: type.name == 'FOLLOW' ? '关注' : 
+                                                        type.name == 'APP' ? '应用' :
+                                                        type.name == 'FEED' ? '动态' :
+                                                        type.name == 'HOT' ? '热门' :
+                                                        type.name == 'TOPIC' ? '话题' :
+                                                        type.name == 'PRODUCT' ? '产品' :
+                                                        type.name == 'COOLPIC' ? '酷图' : type.name)).toList();
 
   final _pages = [
     const HomeFeedPage(tabType: TabType.FOLLOW),
@@ -96,7 +102,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           IconButton(
             onPressed: () => Get.toNamed('/search'),
             icon: const Icon(Icons.search),
-            tooltip: 'Search',
+            tooltip: '搜索',
           )
         ],
       ),

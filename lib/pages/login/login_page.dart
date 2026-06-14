@@ -3,6 +3,8 @@ import 'dart:convert';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+
+import '../../constants/app_strings.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart' hide Response;
@@ -175,7 +177,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('登录'),
+        title: Text(AppStrings.of(context).login),
         bottom: const PreferredSize(
           preferredSize: Size.zero,
           child: Divider(height: 1),
@@ -336,7 +338,7 @@ class _LoginPageState extends State<LoginPage> {
                           _beforeLogin();
                         }
                       : null,
-                  child: const Text('登录'),
+                  child: Text(AppStrings.of(context).login),
                 ),
               ),
             ],

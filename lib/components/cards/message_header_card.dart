@@ -1,5 +1,7 @@
 import 'package:c001apk_flutter/components/network_image.dart';
 import 'package:flutter/material.dart';
+
+import '../../constants/app_strings.dart';
 import 'package:get/get.dart';
 
 import '../../logic/model/feed/datum.dart';
@@ -28,7 +30,7 @@ class MessageHeaderCard extends StatelessWidget {
           if (!GlobalData().isLogin)
             FilledButton.tonal(
               onPressed: onLogin,
-              child: const Text('点击登录'),
+              child: Text(AppStrings.of(context).clickToLogin),
             ),
           Visibility(
             maintainSize: true,

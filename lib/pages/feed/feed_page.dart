@@ -432,7 +432,7 @@ class _FeedPageState extends State<FeedPage> with TickerProviderStateMixin {
                 )),
                 child: FloatingActionButton(
                   heroTag: null,
-                  tooltip: 'Reply',
+                  tooltip: '回复',
                   onPressed: () {
                     _onReply(
                       ReplyType.feed,

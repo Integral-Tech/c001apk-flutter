@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widget_from_html_core/flutter_widget_from_html_core.dart';
 import 'package:get/get.dart';
 
+import '../constants/app_strings.dart';
+
 import '../constants/constants.dart';
 import '../utils/utils.dart';
 
@@ -28,7 +30,7 @@ class _SliderDialogState extends State<SliderDialog> {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: const Center(child: Text('Font Scale')),
+      title: Center(child: Text(AppStrings.of(context).fontScale)),
       content: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -51,14 +53,14 @@ class _SliderDialogState extends State<SliderDialog> {
             widget.setData(1.00);
             Get.back();
           },
-          child: const Text('Reset'),
+          child: Text(AppStrings.of(context).reset),
         ),
         TextButton(
           onPressed: () {
             widget.setData(_fontScale);
             Get.back();
           },
-          child: const Text('OK'),
+          child: Text(AppStrings.of(context).ok),
         ),
       ],
     );
@@ -108,14 +110,14 @@ class EditTextDialog extends StatelessWidget {
       actions: [
         TextButton(
           onPressed: () => Get.back(),
-          child: const Text('Cancel'),
+          child: Text(AppStrings.of(context).cancel),
         ),
         TextButton(
           onPressed: () {
             setData(controller.text);
             Get.back();
           },
-          child: const Text('OK'),
+          child: Text(AppStrings.of(context).ok),
         ),
       ],
     );
@@ -158,7 +160,7 @@ class MAboutDialog extends StatelessWidget {
       ),
       actions: [
         TextButton(
-          child: const Text('View license'),
+          child: const Text('查看许可'),
           onPressed: () {
             showLicensePage(
               context: context,
@@ -169,7 +171,7 @@ class MAboutDialog extends StatelessWidget {
           },
         ),
         TextButton(
-          child: const Text('Close'),
+          child: const Text('关闭'),
           onPressed: () => Get.back(),
         ),
       ],
@@ -187,15 +189,15 @@ class ClearDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: const Center(child: Text('Clear Cache')),
-      content: Text('current cache size: $cacheSize'),
+      title: Center(child: Text('清除缓存')),
+      content: Text('当前缓存大小: $cacheSize'),
       actions: [
         TextButton(
-          child: const Text('Cancel'),
+          child: Text(AppStrings.of(context).cancel),
           onPressed: () => Get.back(),
         ),
         TextButton(
-          child: const Text('OK'),
+          child: Text(AppStrings.of(context).ok),
           onPressed: () {
             onClearCache();
             Get.back();

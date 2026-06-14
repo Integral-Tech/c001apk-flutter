@@ -105,7 +105,7 @@ class _AppListPageState extends State<AppListPage>
                   child: FloatingActionButton(
                     heroTag: null,
                     onPressed: () => Get.toNamed('/appUpdate'),
-                    tooltip: 'Update',
+                    tooltip: '更新',
                     child: const Icon(Icons.update),
                   ),
                 )

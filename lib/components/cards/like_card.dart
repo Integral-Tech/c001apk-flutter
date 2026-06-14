@@ -1,5 +1,7 @@
 import 'package:c001apk_flutter/components/network_image.dart';
 import 'package:flutter/material.dart';
+
+import '../../constants/app_strings.dart';
 import 'package:get/get.dart';
 
 import '../../components/html_text.dart';
@@ -48,7 +50,7 @@ class LikeCard extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 10),
-          Text('赞了你的${data.infoHtml}'),
+          Text(AppStrings.of(context).likedYour(data.infoHtml ?? '')),
           const SizedBox(height: 10),
           InkWell(
             onTap: () => Utils.onOpenLink(data.url ?? ''),

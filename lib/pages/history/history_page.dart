@@ -60,7 +60,7 @@ class _HistoryPageState extends State<HistoryPage> {
                       ),
                     ),
                     icon: const Icon(Icons.clear_all),
-                    tooltip: 'Clear All',
+                    tooltip: '清除全部',
                   )
                 ]
               : null,

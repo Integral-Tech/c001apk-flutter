@@ -62,17 +62,17 @@ class _MainPageState extends State<MainPage> {
       NavigationDestination(
         selectedIcon: Icon(Icons.home),
         icon: Icon(Icons.home_outlined),
-        label: 'Home',
+        label: '首页',
       ),
       NavigationDestination(
         selectedIcon: Icon(Icons.message),
         icon: Icon(Icons.message_outlined),
-        label: 'Message',
+        label: '消息',
       ),
       NavigationDestination(
         selectedIcon: Icon(Icons.settings),
         icon: Icon(Icons.settings_outlined),
-        label: 'Settings',
+        label: '设置',
       ),
     ];
 
@@ -80,17 +80,17 @@ class _MainPageState extends State<MainPage> {
       NavigationRailDestination(
         selectedIcon: Icon(Icons.home),
         icon: Icon(Icons.home_outlined),
-        label: Text('Home'),
+        label: Text('首页'),
       ),
       NavigationRailDestination(
         selectedIcon: Icon(Icons.message),
         icon: Icon(Icons.message_outlined),
-        label: Text('Message'),
+        label: Text('消息'),
       ),
       NavigationRailDestination(
         selectedIcon: Icon(Icons.settings),
         icon: Icon(Icons.settings_outlined),
-        label: Text('Settings'),
+        label: Text('设置'),
       ),
     ];
 

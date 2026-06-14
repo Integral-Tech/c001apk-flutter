@@ -158,7 +158,7 @@ class _HomeFeedPageState extends State<HomeFeedPage>
                       //   builder: (context) => const ReplyDialog(),
                       // );
                     },
-                    tooltip: 'Create Feed',
+                    tooltip: '发布动态',
                     child: const Icon(Icons.add),
                   ),
                 )

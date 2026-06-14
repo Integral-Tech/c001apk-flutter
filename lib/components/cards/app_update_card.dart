@@ -1,5 +1,7 @@
 import 'package:c001apk_flutter/components/network_image.dart';
 import 'package:flutter/material.dart';
+
+import '../../constants/app_strings.dart';
 import 'package:get/get.dart';
 
 import '../../logic/model/check_update/datum.dart';
@@ -125,7 +127,7 @@ class _AppUpdateCardState extends State<AppUpdateCard> {
                               visualDensity: const VisualDensity(
                                   horizontal: -2, vertical: -2),
                             ),
-                            child: const Text('下载'),
+                            child: Text(AppStrings.of(context).download),
                           )
                         ],
                       ),

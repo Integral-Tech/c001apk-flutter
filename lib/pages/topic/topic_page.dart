@@ -164,7 +164,7 @@ class _TopicPageState extends State<TopicPage> with TickerProviderStateMixin {
                         //   ),
                         // );
                       },
-                      tooltip: 'Create Feed',
+                      tooltip: '发布动态',
                       child: const Icon(Icons.add),
                     )
                   : null,
@@ -202,7 +202,7 @@ class _TopicPageState extends State<TopicPage> with TickerProviderStateMixin {
                             : _topicController.id!,
                       }),
                       icon: const Icon(Icons.search),
-                      tooltip: 'Search',
+                      tooltip: '搜索',
                     ),
                   PopupMenuButton(
                     onSelected: (TopicMenuItem item) {
